@@ -11,7 +11,7 @@ app.get('/person/:id?', (req, res) => {
     return;
   }
 
-  const sql = 'SELECT * FROM contacts WHERE contacts_id = ?';
+  const sql = 'SELECT * FROM contacts WHERE contacts_id = ?;';
 
   connection.query(sql, [id], (err, result) => {
     if (err) {
